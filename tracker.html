@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="tracker.css" />
+  </head>
+  <body>
+    <h1>Job Application Tracker</h1>
+    <form method="POST" action="/api/applications">
+      <table id="application">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role Title</th>
+            <th>Work Type</th>
+            <th>Role Type</th>
+            <th>Date Applied</th>
+            <th>Application Method</th>
+            <th>Job Posting Link</th>
+            <th>Tech Stack</th>
+            <th>Application Status</th>
+            <th>Interview Stage</th>
+            <th>Interview Date</th>
+            <th>Contact Person</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" name="company_name" placeholder="Google" />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="role_title"
+                placeholder="Software Engineer"
+              />
+            </td>
+            <td>
+              <select name="work_type">
+                <option value="">Select an option</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Onsite">Onsite</option>
+              </select>
+            </td>
+            <td>
+              <select name="role_type">
+                <option value="">Select an option</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Internship">Internship</option>
+              </select>
+            </td>
+            <td>
+              <input type="text" name="date_applied" placeholder="YYYY-MM-DD" />
+            </td>
+            <td>
+              <select name="application_method">
+                <option value="">Select an option</option>
+                <option value="Company Career Site">Company Career Site</option>
+                <option value="Referral">Referral</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Indeed">Indeed</option>
+                <option value="Other - See notes">Other - See notes</option>
+              </select>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="job_posting_link"
+                placeholder="www.job-link.com/785485658"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="tech_stack"
+                placeholder="JavaScript, HTMl, CSS, C++"
+              />
+            </td>
+            <td>
+              <select name="application_status">
+                <option value="">Select an option</option>
+                <option value="Applied">Applied</option>
+                <option value="Interviewing">Interviewing</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Ghosted">Ghosted</option>
+              </select>
+            </td>
+            <td>
+              <select name="interview_stage">
+                <option value="">Select an option</option>
+                <option value="None">None</option>
+                <option value="Phone Screen">Phone Screen</option>
+                <option value="Technical">Technical</option>
+                <option value="Final Round">Final Round</option>
+                <option value="Offer">Offer</option>
+              </select>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="interview_date"
+                placeholder="YYYY-MM-DD"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="contact_person"
+                placeholder="Jasmine Smith - recruiter@recruit.com"
+              />
+            </td>
+            <td>
+              <textarea
+                name="notes"
+                placeholder="Notes"
+                rows="2"
+                cols="20"
+              ></textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" id="submit">Add Job</button>
+    </form>
+    <h2>Saved Applications</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role Title</th>
+          <th>Work Type</th>
+          <th>Role Type</th>
+          <th>Date Applied</th>
+          <th>Method</th>
+          <th>Link</th>
+          <th>Tech Stack</th>
+          <th>Status</th>
+          <th>Interview Stage</th>
+          <th>Interview Date</th>
+          <th>Contact</th>
+          <th>Notes</th>
+          <th>Save/Delete</th>
+        </tr>
+      </thead>
+      <tbody id="application-list"></tbody>
+    </table>
+
+    <script src="/tracker.js"></script>
+  </body>
+</html>
