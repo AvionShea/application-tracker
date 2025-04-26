@@ -28,7 +28,7 @@ Ideal for job seekers looking to stay organized while job hunting, this app is b
 
 ## <a name="features">Features</a>
 
-👉 **Track Applications**: Add details like company, role, date applied, location, resume used, and more.  
+👉 **Track Applications**: Add details like company, role, date applied, location, and more.
 👉 **Update Status**: Use dropdowns to easily change the status or interview stage of any saved application.  
 👉 **Edit or Delete Entries**: Manage or remove saved entries easily.
 
