@@ -5,12 +5,18 @@ const app = express();
 const router = express.Router();
 const path = require('path');
 const PORT = 3000;
+const dotenv = require('dotenv');
+dotenv.config();
+
+const DB_PW = process.env.POSTGRES_DB_PW;
+const DB_NAME = process.env.POSTGRES_DB_NAME;
+
 app.use(express.json());
 
 // This part sets up the database
 const { Pool } = require('pg');
 // You may need to modify the password or database name in the following line:
-const connectionString = `postgres://postgres:DB_PW@localhost/DB`;
+const connectionString = `postgres://postgres:${DB_PW}@localhost/${DB_NAME}`;
 
 const pool = new Pool({ connectionString: connectionString });
 
