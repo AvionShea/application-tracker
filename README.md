@@ -28,8 +28,8 @@ Ideal for job seekers looking to stay organized while job hunting, this app is b
 
 ## <a name="features">Features</a>
 
-👉 **Track Applications**: Add details like company, role, date applied, location, and more.    
-👉 **Update Status**: Use dropdowns to easily change the status or interview stage of any saved application.    
+👉 **Track Applications**: Add details like company, role, date applied, location, and more.  
+👉 **Update Status**: Use dropdowns to easily change the status or interview stage of any saved application.  
 👉 **Edit or Delete Entries**: Manage or remove saved entries easily.
 
 ---
@@ -56,11 +56,21 @@ Ideal for job seekers looking to stay organized while job hunting, this app is b
 
 ### **Prerequisites**
 
-npm install express pg body-parser
+npm install express pg body-parser dotenv
 
 ### **Clone the Repo**
 
 ```bash
 git clone https://github.com/AvionShea/application-tracker.git
 cd application-tracker
+```
+
+### **Configure Environment Variables (.env)**
+
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+#POSTGRES
+POSTGRES_DB_PW =;
+POSTGRES_DB_NAME =;
 ```
